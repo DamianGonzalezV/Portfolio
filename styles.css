@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap");
+
+/* 
+https://coolors.co/464545-2f2f2f-1b1b1b-f54703-ff7518
+
+l gray: #f8f9fa
+
+*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif; /* Body text */
+  height: 100vh;
+  width: 100vw;
+  background-color: #f8f9fa;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: #464545;
+}
+
+h1,
+h2,
+h3,
+.name {
+  font-family: "Montserrat", sans-serif; /* Headings and name*/
+  font-weight: 600;
+  margin: 0;
+}
+
+main {
+  background-color: #f5f5f5;
+  width: 95vw;
+  height: 95vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1.5fr;
+  padding: 2rem;
+}
+
+/* Grid items repartition layout */
+
+.main-resume-data {
+  grid-column: 1/4;
+  grid-row: 1/3;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1;
+  gap: 3rem;
+}
+
+.profile-photo {
+  width: 100%;
+  margin: auto;
+  width: 400px;
+  grid-column: 1/2;
+  border-radius: 100%;
+  /* background-color: ; */
+}
+
+.div-data {
+  grid-column: 2/ 5;
+  grid-row: 1/2;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.tech-stack-div {
+  height: 70%;
+  width: 90%;
+  grid-column: 1/2;
+  grid-row: 3/4;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50px 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+/* tech-stack-div inside */
+
+.color-div {
+  grid-column: 1/4;
+  background-color: #dee2e6;
+  border-radius: 0.5rem;
+  transition: 1.2s;
+}
+
+.color-div:hover {
+  grid-column: 1/4;
+  background-color: #464545;
+}
+
+li {
+  list-style: none;
+  margin: auto;
+
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-family: "JetBrains Mono", serif;
+}
+
+.cypress {
+  background: linear-gradient(95deg, #4a55e2, #7b45cb);
+  grid-column: 1/3;
+  color: #f5f5f5;
+}
+
+.javascript {
+  grid-column: 2/3;
+  background-color: #f8e100;
+}
+
+.html {
+  background-color: #d55302;
+}
+
+/* main resume data inside */
+.name {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.div-data h1 {
+  font-size: 4rem;
+}
+
+.div-data h1 span {
+  color: #f54703;
+}
+
+hr {
+  margin: 2rem auto;
+  width: 100%;
+  border: 0;
+  border-top: 3px solid #1b1b1b;
+}
+
+.icons-button {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 100%;
+  background-color: #eec422;
+}
+
+.icons-button i {
+  font-size: 2rem;
+  color: #464545;
+}
+
+/* Projects */
+
+.projects-section {
+  border: 1px solid #c3c3c3;
+  grid-column: 2/ -1;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 60px 1fr;
+}
+
+.projects-text {
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  font-family: "JetBrains Mono", serif;
+}
+
+.project-eg-div {
+  grid-row: 2/3;
+  margin: auto;
+  border-radius: 0.5rem;
+  width: 90%;
+  height: 90%;
+  background-color: #eaeaea;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-eg-div p {
+  text-align: left;
+  font-size: 1.5rem;
+  margin: auto;
+}
+
+.project-eg-div h3 {
+  font-size: 2rem;
+}
