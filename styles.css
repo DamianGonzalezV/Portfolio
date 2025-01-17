@@ -61,7 +61,7 @@ main {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1;
   gap: 3rem;
-  padding: 2rem 10rem;
+  padding: 2rem 2rem;
 
   transition: 0.1s;
 }
@@ -179,23 +179,19 @@ hr {
   border-top: 3px solid #464545;
 }
 
-.icons-button {
+.icons-button,
+a {
   width: 3rem;
   height: 3rem;
   border: none;
   border-radius: 100%;
   background-color: #eec422;
 
-  transition: 0.23s;
+  transition: 0.2s;
 }
 
 .icons-button:hover {
-  width: 18rem;
-  height: 3rem;
-  border: none;
-  border-radius: 2rem;
-
-  margin-right: 2rem;
+  transform: scale(1.1);
 }
 
 .icons-button i {
@@ -230,17 +226,20 @@ hr {
   width: 95%;
   height: 95%;
   background-color: #eaeaea;
-  padding: 2rem;
+  /* padding: 2rem; */
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: first baseline;
   align-items: center;
+
+  overflow: hidden;
 }
 
 .project-eg-div img {
   width: 100%;
-  border-radius: 12px;
+  overflow: hidden;
+  border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
 
@@ -263,7 +262,16 @@ hr {
   border-radius: 100%;
   background-color: #eec422;
 
-  transition: 0.23s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.2s;
+}
+
+.icons-button-project:hover,
+.icons-button-view:hover {
+  transform: scale(1.1);
 }
 
 .icons-button-project i {
@@ -289,16 +297,22 @@ hr {
   border-radius: 1rem;
   color: #464545;
   background-color: #eec422;
+
+  transition: 0.2s;
 }
 
 .icons-button-view i {
   font-size: 1.5rem;
 }
 
+.icons-button-view a {
+  color: #464545;
+}
+
 @media screen and (max-width: 1500px) {
   main {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.8fr 0.8fr 0.5fr 2.4fr;
+    grid-template-rows: 0.8fr 0.8fr 0.3fr 2fr;
     gap: 2rem;
   }
 
@@ -339,7 +353,7 @@ hr {
 @media screen and (max-width: 1100px) {
   main {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1.5fr 0.3fr 2.5fr;
+    grid-template-rows: 1fr 1.5fr 0.3fr 2.2fr;
   }
 
   .tech-stack-div {
@@ -372,6 +386,9 @@ hr {
 }
 
 @media screen and (max-width: 700px) {
+  body {
+    height: auto;
+  }
   main {
     height: 100%;
     width: 98%;
@@ -430,6 +447,21 @@ hr {
   }
 
   .projects-section {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+
+  .project-eg-div {
+    width: 70%;
+    height: 350px;
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-eg-div img {
+    width: 100%;
   }
 }
